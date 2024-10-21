@@ -13,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-
-    $name = "francesco totti";
-
+    $name = "Francesco Totti";
     return view('home', ['name' => $name]);
+})->name('home');
 
-});
+Route::get('/about', function () {
+    return view('about')->name('about');
+})->name('about');
+
+Route::get('/contact', function () {
+    return view('contact')->name('contact');
+})->name('contact');
